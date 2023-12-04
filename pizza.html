@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIZZA MENU</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url('pizzabackground.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .pizza-container {
+            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .pizza-menu-heading {
+            width: 100%;
+            text-align: center;
+            font-size: 28px;
+            color: #38c016;
+            margin-bottom: 20px;
+        }
+
+        .pizza-item {
+            box-sizing: border-box;
+            width: 300px;
+            margin: 20px;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .pizza-item img {
+            max-width: 100%;
+            border-radius: 6px;
+        }
+
+        h3 {
+            margin-top: 10px;
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        select,
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+nav {
+    background-color: #60a634;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+a:hover {
+    background-color: #45a049;
+    border-radius: 5px;
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="pizza-menu-heading">
+        <h2>Pizza Menu</h2>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="pizza.html">Pizza</a></li>
+            <li><a href="side.html">Side</a></li>
+            <li><a href="dessert.html">Dessert</a></li>
+            <li><a href="drink.html">Drink</a></li>
+            <li><a href="checkout.html">Checkout</a></li>
+        </ul>
+        </nav>
+
+    <div class="pizza-container">
+        <div class="pizza-item" id="pizza1">
+            <img src="beef and onion.jpg" alt="pizza 1">
+            <h3>beef and onion</h3>
+            <p id="price-small-1">(Small): $10.99</p>
+            <p id="price-large-1">(Large): $15.99</p>
+            <p id="price-extra-large-1">(Extra Large): $19.99</p>
+            <label for="pizza-size-1">Select Size:</label>
+            <select id="pizza-size-1"
+                onchange="updatePrice('pizza-size-1', 'price-small-1', 'price-large-1', 'price-extra-large-1')">
+                <option value="small">Mini</option>
+                <option value="large">Large</option>
+                <option value="extra-large">Extra Large</option>
+            </select>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" value="1" min="1">
+            <button onclick="addToCart('beef and onion', 'pizza-size-1')">Add to Cart</button>
+        </div>
+
+
+        <div class="pizza-item" id="pizza2">
+            <img src="Margherita Pizza.jpg" alt="pizza 2">
+            <h3>Margherita Pizza</h3>
+            <p id="price-small-2">(Small): $10.99</p>
+            <p id="price-large-2">(Large): $15.99</p>
+            <p id="price-extra-large-2">(Extra Large): $19.99</p>
+            <label for="pizza-size-2">Select Size:</label>
+            <select id="pizza-size-2"
+                onchange="updatePrice('pizza-size-2', 'price-small-2', 'price-large-2', 'price-extra-large-2')">
+                <option value="small">Mini</option>
+                <option value="large">Large</option>
+                <option value="extra-large">Extra Large</option>
+            </select>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" value="1" min="1">
+            <button onclick="addToCart('Margherita Pizza', 'pizza-size-2')">Add to Cart</button>
+        </div>
+
+
+        <div class="pizza-item" id="pizza3">
+            <img src="BBQ Chicken Pizza.jpg" alt="pizza 3">
+            <h3>BBQ Chicken Pizza</h3>
+            <p id="price-small-3">(Small): $10.99</p>
+            <p id="price-large-3">(Large): $15.99</p>
+            <p id="price-extra-large-3">(Extra Large): $19.99</p>
+            <label for="pizza-size-3">Select Size:</label>
+            <select id="pizza-size-3"
+                onchange="updatePrice('pizza-size-3', 'price-small-3', 'price-large-3', 'price-extra-large-3')">
+                <option value="small">Mini</option>
+                <option value="large">Large</option>
+                <option value="extra-large">Extra Large</option>
+            </select>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" value="1" min="1">
+            <button onclick="addToCart('BBQ Chicken Pizza', 'pizza-size-3')">Add to Cart</button>
+        </div>
+    </div>
+    
+    <div class="pizza-container">
+        <div class="pizza-item" id="pizza4">
+            <img src="Cheese Pizza.jpg" alt="pizza 4">
+            <h3>Cheese Pizza</h3>
+            <p id="price-small-4">(Small): $10.99</p>
+            <p id="price-large-4">(Large): $15.99</p>
+            <p id="price-extra-large-4">(Extra Large): $19.99</p>
+            <label for="pizza-size-4">Select Size:</label>
+            <select id="pizza-size-4"
+                onchange="updatePrice('pizza-size-4', 'price-small-4', 'price-large-4', 'price-extra-large-4')">
+                <option value="small">Mini</option>
+                <option value="large">Large</option>
+                <option value="extra-large">Extra Large</option>
+            </select>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" value="1" min="1">
+            <button onclick="addToCart('Cheese Pizza', 'pizza-size-4')">Add to Cart</button>
+        </div>
+
+
+        <div class="pizza-item" id="pizza5">
+            <img src="spicy veg trio.jpg" alt="pizza 5">
+            <h3>spicy veg trio</h3>
+            <p id="price-small-5">(Small): $10.99</p>
+            <p id="price-large-5">(Large): $15.99</p>
+            <p id="price-extra-large-5">(Extra Large): $19.99</p>
+            <label for="pizza-size-5">Select Size:</label>
+            <select id="pizza-size-5"
+                onchange="updatePrice('pizza-size-5', 'price-small-5', 'price-large-5', 'price-extra-large-5')">
+                <option value="small">Mini</option>
+                <option value="large">Large</option>
+                <option value="extra-large">Extra Large</option>
+            </select>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" value="1" min="1">
+            <button onclick="addToCart('spicy veg trio', 'pizza-size-5')">Add to Cart</button>
+        </div>
+
+
+ 
+        <div class="pizza-item" id="pizza6">
+            <img src="Hawaiian Pizza.jpg" alt="pizza 6">
+            <h3>Hawaiian Pizza</h3>
+            <p id="price-small-6">(Small): $10.99</p>
+            <p id="price-large-6">(Large): $15.99</p>
+            <p id="price-extra-large-6">(Extra Large): $19.99</p>
+            <label for="pizza-size-6">Select Size:</label>
+            <select id="pizza-size-6"
+                onchange="updatePrice('pizza-size-6', 'price-small-6', 'price-large-6', 'price-extra-large-6')">
+                <option value="small">Mini</option>
+                <option value="large">Large</option>
+                <option value="extra-large">Extra Large</option>
+            </select>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" value="1" min="1">
+            <button onclick="addToCart('Hawaiian Pizza', 'pizza-size-6')">Add to Cart</button>
+    </div>
+   
+    
+    
+
+    <script>
+        function addToCart(pizzaName, sizeId) {
+            var selectedSize = document.getElementById(sizeId).value;
+            var quantity = document.getElementById("quantity").value;
+
+            // Fetch the current displayed price based on the selected size
+            var priceElement = document.getElementById("price-" + selectedSize + "-" + sizeId.split("-")[2]);
+            var price = parseFloat(priceElement.innerText.replace("Price (" + selectedSize.charAt(0).toUpperCase() + selectedSize.slice(1) + "): $", ""));
+
+            var totalPrice = price * quantity;
+
+            // You can add the item to the cart or perform other actions here
+            console.log("Pizza: " + pizzaName + ", Size: " + selectedSize + ", Quantity: " + quantity + ", Total Price: $" + totalPrice);
+        }
+
+        function updatePrice(sizeId, priceSmallId, priceLargeId, priceExtraLargeId) {
+            var selectedSize = document.getElementById(sizeId).value;
+            var priceSmallElement = document.getElementById(priceSmallId);
+            var priceLargeElement = document.getElementById(priceLargeId);
+            var priceExtraLargeElement = document.getElementById(priceExtraLargeId);
+
+            // Your pricing logic based on the selected size
+            var priceSmall = 10.99;
+            var priceLarge = 15.99;
+            var priceExtraLarge = 19.99;
+
+            // Update the displayed prices
+            priceSmallElement.innerText = "Price (Small): $" + priceSmall.toFixed(2);
+            priceLargeElement.innerText = "Price (Large): $" + priceLarge.toFixed(2);
+            priceExtraLargeElement.innerText = "Price (Extra Large): $" + priceExtraLarge.toFixed(2);
+        }
+        function addToCart(pizza) {
+            var quantity = parseInt(document.getElementById(pizza.toLowerCase() + '_quantity').textContent);
+            if (quantity > 0) {
+                alert('Added ' + quantity + ' ' + pizza + ' to the cart!\nTotal Price: $' + (quantity * price).toFixed(2));
+               
+            } else {
+                alert('Please add at least one ' + pizza + ' to the cart before proceeding.');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background-color: #f90e0e;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+
+        nav ul li {
+            float: left;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            background-color: #45a049;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Checkout</h2>
+        <nav>
+            <ul>
+                <li><a href="pizza.html">Pizza</a></li>
+                <li><a href="side.html">Side</a></li>
+                <li><a href="dessert.html">Dessert</a></li>
+                <li><a href="drink.html">Drink</a></li>
+                <li><a href="checkout.html">Checkout</a></li>
+            </ul>
+        </nav>
+        <form action="your_server_processing_script.php" method="post">
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" required>
+
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="totalAmount">Total Amount:</label>
+            <input type="text" id="totalAmount" name="totalAmount" readonly>
+
+            <label for="totalItems">Total Items:</label>
+            <input type="text" id="totalItems" name="totalItems" readonly>
+
+            <button type="submit">Place order 
+                
+            </button>
+        </form>
+    </div>
+
+    <script>
+        // Calculate total amount and total items based on item price (fixed) and a predefined quantity
+        var itemPrice = 0; // Replace with actual item price
+        var quantity = 0; // Predefined quantity
+
+        var totalAmount = itemPrice * quantity;
+
+        document.getElementById('totalAmount').value = totalAmount.toFixed(2);
+        document.getElementById('totalItems').value = quantity;
+    </script>
+
+</body>
+</html>

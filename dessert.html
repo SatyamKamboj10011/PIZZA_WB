@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dessert Menu</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('dessertbackground.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+         
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .menu-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .menu-item {
+            box-sizing: border-box;
+            width: 300px;
+            margin: 20px;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .menu-item img {
+            max-width: 100%;
+            border-radius: 6px;
+        }
+
+        h2 {
+            color: #ffffff;
+        }
+
+        h3 {
+            margin-top: 10px;
+            color: #6d0d0d;
+        }
+
+        p {
+            color: #666;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #e44d26;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #cc4125;
+        }
+       
+     nav {
+    background-color: #343da6;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+a:hover {
+    background-color: #45a049;
+    border-radius: 5px;
+}
+    </style>
+</head>
+
+<body>
+
+<h2 style="margin-left: 45%;">Dessert Menu</h2>
+<nav>
+    <ul>
+        <li><a href="pizza.html">Pizza</a></li>
+        <li><a href="side.html">Side</a></li>
+        <li><a href="dessert.html">Dessert</a></li>
+        <li><a href="drink.html">Drink</a></li>
+        <li><a href="checkout.html">Checkout</a></li>
+    </ul>
+</nav>
+<div class="menu-container">
+    
+    
+   
+    <div class="menu-item">
+        <img src="cakeroll.jpg" alt="cakeroll">
+        <h3>cakeroll</h3>
+        <p>Price: $7.99</p>
+        <label for="cakeroll-quantity">Quantity:</label>
+        <input type="number" id="cakeroll-quantity" name="cakeroll-quantity" value="1" min="1">
+        <button onclick="addToCart('Cakeroll', 7.99)">Add to Cart</button>
+    </div>
+
+    <div class="menu-item">
+        <img src="Chocolate Mousse.jpg" alt="chocolate mousse">
+        <h3>chocolate mousse</h3>
+        <p>Price: $5.99</p>
+        <label for="chocolate mousse-quantity">Quantity:</label>
+        <input type="number" id="chocolate mousse-quantity" name="chocolate mousse-quantity" value="1" min="1">
+        <button onclick="addToCart('chocolate mousse', 5.99)">Add to Cart</button>
+    </div>
+
+    <div class="menu-item">
+        <img src="Mini carrot cake.jpg" alt="mini carrot cake">
+        <h3>mini carrot cake</h3>
+        <p>Price: $5.99</p>
+        <label for="mini carrot cake-quantity">Quantity:</label>
+        <input type="number" id="mini carrot cake-quantity" name="mini carrot cake-quantity" value="1" min="1">
+        <button onclick="addToCart('mini carrot cake', 5.99)">Add to Cart</button>
+    </div>
+
+    <div class="menu-item">
+        <img src="Italian Tiramisu.jpg" alt="italian tiramisu">
+        <h3>italian tiramisu</h3>
+        <p>Price: $9.99</p>
+        <label for="italian tiramisu-quantity">Quantity:</label>
+        <input type="number" id="italian tiramisu-quantity" name="italian tiramisu-quantity" value="1" min="1">
+        <button onclick="addToCart('italian tiramisu', 9.99)">Add to Cart</button>
+    </div>
+
+    <div class="menu-item">
+        <img src="Mini tiramisu cups.jpg" alt="Mini tiramisu cups">
+        <h3>Mini tiramisu cups</h3>
+        <p>Price: $8.50</p>
+        <label for="Mini tiramisu cups-quantity">Quantity:</label>
+        <input type="number" id="Mini tiramisu cups-quantity" name="Mini tiramisu cups-quantity" value="1" min="1">
+        <button onclick="addToCart('Mini tiramisu cups', 8.50)">Add to Cart</button>
+    </div>
+
+    <div class="menu-item">
+        <img src="Pudding.jpg" alt="pudding">
+        <h3>pudding</h3>
+        <p>Price: $10.00</p>
+        <label for="pudding-quantity">Quantity:</label>
+        <input type="number" id="pudding-quantity" name="pudding-quantity" value="1" min="1">
+        <button onclick="addToCart('pudding', 10.00)">Add to Cart</button>
+    </div>
+</div>
